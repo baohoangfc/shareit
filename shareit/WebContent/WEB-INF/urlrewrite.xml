@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<urlrewrite>
+	<!-- edit -->
+	<rule>
+		<from>^/chuyen-muc/(.*)-([0-9]+).html</from>
+		<to>/admin-cat/edit?id=$2</to>
+	</rule>
+	<rule>
+		<from>^/bai-viet/(.*)-([0-9]+).html</from>
+		<to>/admin-news/edit?id=$2</to>
+	</rule>
+	<rule>
+		<from>^/nguoi-dung/(.*)-([0-9]+).html</from>
+		<to>/admin-user/edit?id=$2</to>
+	</rule>
+	<!-- edit -->
+	
+	<!-- del -->
+	<rule>
+		<from>^/bai-viet/(.*)/([0-9]+).html</from>
+		<to>/admin-news/del?id=$2</to>
+	</rule>
+	<rule>
+		<from>^/chuyen-muc/(.*)/([0-9]+).html</from>
+		<to>/admin-cat/del?id=$2</to>
+	</rule>
+	<rule>
+		<from>^/nguoi-dung/(.*)/([0-9]+).html</from>
+		<to>/admin-user/del?id=$2</to>
+	</rule>
+	<rule>
+		<from>^/binh-luan/(.*)/([0-9]+).html</from>
+		<to>/admin-comment/del?id=$2</to>
+	</rule>
+	<!-- del -->
+	
+	<!-- add -->
+	<rule>
+		<from>^/chuyen-muc/(.*).html</from>
+		<to>/admin-cat/add</to>
+	</rule>
+	<rule>
+		<from>^/bai-viet/(.*).html</from>
+		<to>/admin-news/add</to>
+	</rule>
+	<rule>
+		<from>^/nguoi-dung/(.*).html</from>
+		<to>/admin-user/add</to>
+	</rule>
+	<!-- add -->
+
+	<!-- -->
+	<rule>
+		<from>^/chuyen-muc.html</from>
+		<to>/admin-cat</to>
+	</rule>
+	<rule>
+		<from>^/nguoi-dung.html</from>
+		<to>/admin-user</to>
+	</rule>
+	<rule>
+		<from>^/bai-viet.html</from>
+		<to>/admin-news</to>
+	</rule>
+	<rule>
+		<from>^/binh-luan.html</from>
+		<to>/admin-comment</to>
+	</rule>
+	<!--  -->
+
+	
+
+	
+	
+	<rule>
+		<from>^/danh-muc/(.+)-([0-9]+)/page-([0-9]+).html</from>
+		<to>/danhmuc?page=$3&amp;cid=$2</to>
+	</rule>
+	<rule>
+		<from>^/danh-muc/(.+)-([0-9]+).html</from>
+		<to>/danhmuc?cid=$2</to>
+	</rule>
+	<rule>
+		<from>^/chi-tiet/(.+)-([0-9]+).html</from>
+		<to>/chitiet?did=$2</to>
+	</rule>
+</urlrewrite>
+
